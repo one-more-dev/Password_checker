@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">	<!-- LANG STANDS FOR LANGUAGE -->
+<head>
+	<meta charset="UTF-8">	<!-- CHARSET IS CHARACTER SETTING -->
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<title>Password definer</title>
+</head>
+
+
+
+<body style="background: orange;padding: 2%">
+	<h2>Password checker</h2>
+	<p>Choose a password:</p>
+
+	<p id="numbers">
+		<button type="button" class="numbers" onclick="func(0)">0</button>
+		<button type="button" class="numbers" onclick="func(1)">1</button>
+		<button type="button" class="numbers" onclick="func(2)">2</button>
+		<button type="button" class="numbers" onclick="func(3)">3</button>
+		<button type="button" class="numbers" onclick="func(4)">4</button>
+		<button type="button" class="numbers" onclick="func(5)">5</button>
+		<button type="button" class="numbers" onclick="func(6)">6</button>
+		<button type="button" class="numbers" onclick="func(7)">7</button>
+		<button type="button" class="numbers" onclick="func(8)">8</button>
+		<button type="button" class="numbers" onclick="func(9)">9</button>
+	</p>
+
+	<p id="showing"></p>
+
+	<button type="button" id="reset" onclick="erase()">Reset</button>
+	<button type="button" id="confirm" onclick="check()">Next</button>
+
+
+
+
+
+
+	<p id="secondpart">
+		<button type="button" class="double"></button>
+		<button type="button" class="double"></button>
+		<button type="button" class="double"></button>
+		<button type="button" class="double"></button>
+		<button type="button" class="double"></button>
+
+		<p id="thelist"></p>
+	</p>
+
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="bank.js"></script>
+
+</body>
