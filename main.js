@@ -2,10 +2,8 @@
 UM PROGRAMA EM 	QUE O USUÁRIO ESCOLHE UMA SENHA NUMÉRICA
 E DEPOIS CONFIRMA ESSA SENHA EM UM CONJUNTO DE BOTÕES COM DOIS NÚMEROS EM CADA
 */
-
-document.querySelector("h2").style.color = 'blue';
 passText = document.getElementById("showing");
-part2 = document.getElementById("secondpart");
+part2 = document.querySelector("#secondpart");
 part2.style.visibility = 'hidden';
 
 
@@ -24,12 +22,19 @@ function erase(){
 }
 
 
+function unable(){
+	part2.style.visibility = 'visible';
+	passText.style.visibility = 'hidden';
+	document.getElementById("numbers").style.visibility = 'hidden';
+}
+
+
 function check(){
 	password = passText.innerText;
 	con = confirm(`Your password is ${password}`);
 	if(con == true){
 		//window.location.href = "http://www.youtube.com";
-		part2.style.visibility = 'visible';
+		unable();
 		return password;
 	}else{
 		window.alert("Operation cancelled!")

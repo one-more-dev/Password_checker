@@ -1,5 +1,5 @@
 
-tl = document.getElementById("thelist");
+tl = document.getElementsByClassName("thelist")[0];
 nlist = [];
 for(s=0;s<=9;s++){
 	nlist.push(s);
@@ -7,6 +7,8 @@ for(s=0;s<=9;s++){
 /*console.log(nlist);
 btn0 = document.getElementsByClassName("double")[0];
 btn0.innerText = 13;
+
+
 */
 function valueButton(qtn){
 	for(s=0;s<=4;s++){
@@ -26,4 +28,13 @@ function valueButton(qtn){
 
 valueButton(10);
 
-//tl.innerHTML = compass[Math.floor(Math.random()*10)];
+
+
+
+
+
+
+
+
+
+
