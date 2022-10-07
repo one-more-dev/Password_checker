@@ -17,26 +17,38 @@ function func(btn){
 }
 
 
-function erase(){
-	passText.innerText = "";
-}
+function erase(){	passText.innerText = "";}
 
 
 function unable(){
-	part2.style.visibility = 'visible';
-	passText.style.visibility = 'hidden';
-	document.getElementById("numbers").style.visibility = 'hidden';
+	btn = document.querySelectorAll(".numbers, #reset, #confirm");
+	for(b=0;b<btn.length;b++){
+		btn[b].disabled = true;
+	}
 }
 
 
+function newdoc(){
+	ecma = document.createElement("script");
+	ecma.type = "text/javascript";
+	ecma.src = "bank.js";
+	document.body.appendChild(ecma);
+}
+
+
+//window.location.href = "http://www.youtube.com";
 function check(){
 	password = passText.innerText;
 	con = confirm(`Your password is ${password}`);
 	if(con == true){
-		//window.location.href = "http://www.youtube.com";
+		part2.style.visibility = 'visible';
+		passText.style.visibility = 'hidden';
 		unable();
-		return password;
-	}else{
+		return newdoc();
+		}
+	else{
 		window.alert("Operation cancelled!")
 	}
 }
+
+

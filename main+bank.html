@@ -2,13 +2,13 @@
 <html lang="pt-br">	<!-- LANG STANDS FOR LANGUAGE -->
 <head>
 	<meta charset="UTF-8">	<!-- CHARSET IS CHARACTER SETTING -->
-	<link rel="stylesheet" type="text/css" href="reset.css">
 	<title>Password definer</title>
 </head>
 
 
 
-<body style="background: orange;padding: 2%">
+<!--<body style="background: orange;padding: 2%">-->
+<body style="background: blue;padding: 2%">
 	<h2>Password checker</h2>
 	<p>Choose a password:</p>
 
@@ -35,14 +35,19 @@
 
 
 	<p id="secondpart">
-		<button type="button" class="double"></button>
-		<button type="button" class="double"></button>
-		<button type="button" class="double"></button>
-		<button type="button" class="double"></button>
-		<button type="button" class="double"></button>
-		<span class="thelist"></span>
+		<button class="double" value=90 onclick="insertvalue(0)"></button>
+		<button class="double" onclick="insertvalue(1)"></button>
+		<button class="double" onclick="insertvalue(2)"></button>
+		<button class="double" onclick="insertvalue(3)"></button>
+		<button class="double" onclick="insertvalue(4)"></button>
+
+		<span id="digitx"></span><br>
+		<button id="compare" onclick="checkPass()">Check password!</button>
+
 	</p>
 
 	<script type="text/javascript" src="main.js"></script>
-	<script type="text/javascript" src="bank.js"></script>
+	<!--<script type="text/javascript" src="bank.js"></script>-->
 </body>
+
+
